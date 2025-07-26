@@ -1,0 +1,45 @@
+title: Tom Ray - Musician & Creator
+description: A blog about music, creativity, and the journey of being a musician
+author: Tom Ray
+email: your-email@example.com
+url: "https://tomray.com"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Pagination
+paginate: 9
+paginate_path: "/posts/:num/"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Tom Ray"
+      category: "General"
+      tags: []
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

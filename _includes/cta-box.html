@@ -1,0 +1,19 @@
+{% comment %}
+  Usage:
+  {% include cta-box.html
+     title="Your CTA Title"
+     description="Your description text."
+     button_text="Button Label"
+     button_url="https://your-link-or-download"
+  %}
+{% endcomment %}
+
+<div class="vhs-cta-box">
+  <div class="vhs-cta-content">
+    <div class="vhs-cta-title">{{ include.title }}</div>
+    <div class="vhs-cta-description">{{ include.description }}</div>
+    <a href="{{ include.button_url }}" class="vhs-cta-btn" target="_blank" rel="noopener">
+      {{ include.button_text }}
+    </a>
+  </div>
+</div> 

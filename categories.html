@@ -1,0 +1,25 @@
+---
+layout: default
+title: Categories
+---
+
+<div class="categories-page">
+  <div class="categories-header">
+    <h1 class="categories-title">Categories</h1>
+    <p class="categories-description">Browse posts by category</p>
+  </div>
+
+  <div class="categories-grid">
+    {% assign categories = site.posts | map: "category" | uniq | sort %}
+    {% for category in categories %}
+      {% assign category_posts = site.posts | where_exp: "post", "post.category == category" %}
+      <div class="category-card">
+        <h2 class="category-name">{{ category }}</h2>
+        <p class="category-count">{{ category_posts.size }} post{% if category_posts.size != 1 %}s{% endif %}</p>
+        <a href="{{ '/category/' | append: category | downcase | replace: ' ', '-' | relative_url }}" class="category-link">
+          View Posts →
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div> 

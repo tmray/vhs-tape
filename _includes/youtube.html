@@ -1,0 +1,21 @@
+{% comment %}
+  Usage:
+  {% include youtube.html id="YOUTUBE_VIDEO_ID" title="Optional Title" %}
+{% endcomment %}
+
+<div class="vhs-video-wrapper">
+  <div class="vhs-video-frame">
+    <iframe
+      src="https://www.youtube.com/embed/{{ include.id }}?rel=0&showinfo=0"
+      title="{{ include.title | default: 'YouTube video player' }}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+    <div class="vhs-video-overlay"></div>
+    <div class="vhs-video-scanlines"></div>
+  </div>
+  {% if include.title %}
+    <div class="vhs-video-title">{{ include.title }}</div>
+  {% endif %}
+</div> 

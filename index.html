@@ -1,0 +1,41 @@
+---
+layout: default
+title: Home
+---
+
+<div class="hero-section">
+  <div class="hero-content">
+    <h1>Welcome to My Musical Journey</h1>
+    <p class="hero-subtitle">Exploring creativity, music production, and the life of a musician</p>
+    <div class="hero-cta">
+      <a href="/blog/" class="btn btn-primary">Read My Blog</a>
+      <a href="/about/" class="btn btn-secondary">Learn About Me</a>
+    </div>
+  </div>
+</div>
+
+<section class="featured-content">
+  <h2>Featured Content</h2>
+  <div class="content-grid">
+    {% assign featured_posts = site.posts | where_exp: "post", "post.featured_home_order" | sort: "featured_home_order" | slice: 0, 5 %}
+    {% for post in featured_posts %}
+      <div class="content-card">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.description }}</p>
+        <div class="card-footer">
+          <span class="date">{{ post.date | date: "%B %Y" }}</span>
+          <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="about-preview">
+  <div class="about-content">
+    <h2>About Tom Ray</h2>
+    <p>I'm a musician and creator who believes in the power of sharing the creative process. This blog is where I document my journey, share insights about music production, and connect with fellow creators.</p>
+    <p>From studio sessions to live performances, from technical challenges to moments of pure inspiration – this is where I share it all.</p>
+    <a href="/about/" class="btn btn-outline">Learn More About Me</a>
+  </div>
+</section> 

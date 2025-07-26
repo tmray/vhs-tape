@@ -1,0 +1,80 @@
+---
+layout: default
+title: Posts
+---
+
+<div class="posts-page">
+  <div class="posts-header">
+    <h1>Latest Posts</h1>
+    <p class="posts-subtitle">Exploring music, creativity, and the analog journey</p>
+  </div>
+
+  {% assign posts_per_page = 9 %}
+  {% assign current_page = page.page | default: 1 %}
+  {% assign total_posts = site.posts.size %}
+  {% assign total_pages = total_posts | divided_by: posts_per_page | ceil %}
+  {% assign start_index = current_page | minus: 1 | times: posts_per_page %}
+  {% assign end_index = start_index | plus: posts_per_page | minus: 1 %}
+  {% assign end_index = end_index | at_most: total_posts | minus: 1 %}
+
+  <div class="posts-grid">
+    {% for post in site.posts limit: posts_per_page offset: start_index %}
+      <article class="post-card">
+        <div class="post-card-content">
+          <h2 class="post-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h2>
+          
+          <div class="post-meta">
+            <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+            {% if post.author %}
+              <span class="post-author">by {{ post.author }}</span>
+            {% endif %}
+          </div>
+          
+          {% if post.description %}
+            <p class="post-excerpt">{{ post.description }}</p>
+          {% endif %}
+          
+          <div class="post-footer">
+            <a href="{{ post.url | relative_url }}" class="read-more-btn">Read More →</a>
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+
+  {% if total_pages > 1 %}
+    <div class="pagination">
+      <div class="pagination-info">
+        <span class="pagination-text">
+          Showing {{ start_index | plus: 1 }}-{{ end_index | plus: 1 }} of {{ total_posts }} posts
+        </span>
+      </div>
+      
+      <div class="pagination-controls">
+        {% if current_page > 1 %}
+          <a href="{{ '/posts/' | relative_url }}" class="pagination-btn">First</a>
+          <a href="{{ '/posts/' | relative_url }}{% if current_page > 2 %}{{ current_page | minus: 1 }}{% endif %}" class="pagination-btn">Previous</a>
+        {% endif %}
+        
+        <div class="pagination-numbers">
+          {% for page_num in (1..total_pages) %}
+            {% if page_num == current_page %}
+              <span class="pagination-current">{{ page_num }}</span>
+            {% elsif page_num == 1 %}
+              <a href="{{ '/posts/' | relative_url }}" class="pagination-number">{{ page_num }}</a>
+            {% else %}
+              <a href="{{ '/posts/' | relative_url }}{{ page_num }}" class="pagination-number">{{ page_num }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+        
+        {% if current_page < total_pages %}
+          <a href="{{ '/posts/' | relative_url }}{{ current_page | plus: 1 }}" class="pagination-btn">Next</a>
+          <a href="{{ '/posts/' | relative_url }}{{ total_pages }}" class="pagination-btn">Last</a>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+</div> 

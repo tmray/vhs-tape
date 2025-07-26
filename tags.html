@@ -1,0 +1,22 @@
+---
+layout: default
+title: Tags
+---
+
+<div class="tags-page">
+  <div class="tags-header">
+    <h1 class="tags-title">Tags</h1>
+    <p class="tags-description">Browse posts by tag</p>
+  </div>
+
+  <div class="tags-cloud">
+    {% assign all_tags = site.posts | map: "tags" | uniq | sort %}
+    {% for tag in all_tags %}
+      {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
+      <a href="{{ '/tag/' | append: tag | downcase | replace: ' ', '-' | relative_url }}" class="tag-item">
+        <span class="tag-name">{{ tag }}</span>
+        <span class="tag-count">({{ tag_posts.size }})</span>
+      </a>
+    {% endfor %}
+  </div>
+</div> 

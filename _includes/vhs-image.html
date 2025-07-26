@@ -1,0 +1,22 @@
+{% comment %}
+  Usage:
+  {% include vhs-image.html
+     src="/assets/images/IMAGE_NAME.jpg"
+     alt="Description of image"
+     caption="This is a caption."
+     size="full"
+  %}
+  or size="normal"to make it smaller
+{% endcomment %}
+
+{% assign img_size = include.size | default: 'normal' %}
+<div class="vhs-img-wrapper vhs-img-{{ img_size }}">
+  <div class="vhs-img-frame">
+    <img src="{{ include.src }}" alt="{{ include.alt }}" loading="lazy" />
+    <div class="vhs-img-overlay"></div>
+    <div class="vhs-img-scanlines"></div>
+  </div>
+  {% if include.caption %}
+    <div class="vhs-img-caption">{{ include.caption }}</div>
+  {% endif %}
+</div> 
