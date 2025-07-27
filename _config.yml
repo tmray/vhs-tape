@@ -34,6 +34,29 @@ defaults:
       category: "General"
       tags: []
 
+# Social Media Platforms
+# Add or remove platforms by editing this array
+# Each platform needs: name, url, icon_class
+social_platforms:
+  - name: "Mastodon"
+    url: "https://mastodon.social/@tmray"
+    icon_class: "icon-mastodon"
+  - name: "Instagram"
+    url: "https://instagram.com/tmray"
+    icon_class: "icon-instagram"
+  - name: "Pixelfed"
+    url: "https://pixelfed.social/@tmray"
+    icon_class: "icon-pixelfed"
+  - name: "Facebook"
+    url: "https://facebook.com/tomrayswebsite"
+    icon_class: "icon-facebook"
+  - name: "YouTube"
+    url: "https://youtube.com/@tomrayrules"
+    icon_class: "icon-youtube"
+  # - name: "Twitter"
+  #   url: "https://twitter.com/yourusername"
+  #   icon_class: "icon-twitter"
+
 # Exclude from processing
 exclude:
   - Gemfile

@@ -1,0 +1,24 @@
+{% comment %}
+  Social Media Links Include
+  Usage: {% include social-links.html %}
+  
+  To add/remove social platforms, edit the social_platforms array in _config.yml
+  Each platform should have: name, url, icon_class, color
+{% endcomment %}
+
+{% if site.social_platforms %}
+<div class="social-links">
+  <div class="social-links-container">
+    {% for platform in site.social_platforms %}
+      <a href="{{ platform.url }}" 
+         class="social-link social-{{ platform.name | downcase }}" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         title="{{ platform.name }}">
+        <span class="social-icon {{ platform.icon_class }}"></span>
+        <span class="social-name">{{ platform.name }}</span>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %} 
