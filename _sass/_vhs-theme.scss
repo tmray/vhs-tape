@@ -1630,6 +1630,179 @@ a {
   }
 }
 
+// Social Media Links
+.social-links {
+  margin-top: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--vhs-crt-green);
+}
+
+// Footer social links styling
+.site-footer .social-links {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--vhs-crt-green);
+}
+
+.site-footer .social-links-container {
+  gap: 1rem;
+}
+
+.site-footer .social-link {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.social-links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--vhs-crt-green);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--vhs-crt-green);
+  background: var(--vhs-static-gray);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  
+  &:hover {
+    background: var(--vhs-crt-green);
+    color: var(--vhs-static-gray);
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+    animation: buttonGlitch 0.2s ease-in-out;
+    transform: translateY(-2px);
+  }
+  
+  &:hover .social-icon {
+    animation: iconGlow 0.5s ease-in-out;
+  }
+}
+
+.social-icon {
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.social-name {
+  font-weight: bold;
+}
+
+// Social platform specific colors
+.social-link.social-mastodon {
+  border-color: #6364ff;
+  color: #6364ff;
+  
+  &:hover {
+    background: #6364ff;
+    color: var(--vhs-static-gray);
+    box-shadow: 0 0 15px rgba(99, 100, 255, 0.4);
+  }
+}
+
+.social-link.social-instagram {
+  border-color: #e4405f;
+  color: #e4405f;
+  
+  &:hover {
+    background: #e4405f;
+    color: var(--vhs-static-gray);
+    box-shadow: 0 0 15px rgba(228, 64, 95, 0.4);
+  }
+}
+
+.social-link.social-pixelfed {
+  border-color: #0084ff;
+  color: #0084ff;
+  
+  &:hover {
+    background: #0084ff;
+    color: var(--vhs-static-gray);
+    box-shadow: 0 0 15px rgba(0, 132, 255, 0.4);
+  }
+}
+
+.social-link.social-facebook {
+  border-color: #1877f2;
+  color: #1877f2;
+  
+  &:hover {
+    background: #1877f2;
+    color: var(--vhs-static-gray);
+    box-shadow: 0 0 15px rgba(24, 119, 242, 0.4);
+  }
+}
+
+.social-link.social-youtube {
+  border-color: #ff0000;
+  color: #ff0000;
+  
+  &:hover {
+    background: #ff0000;
+    color: var(--vhs-static-gray);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+  }
+}
+
+// Social Media Icons (using CSS pseudo-elements)
+.icon-mastodon::before {
+  content: "🐘";
+  font-size: 1.2rem;
+}
+
+.icon-instagram::before {
+  content: "📷";
+  font-size: 1.2rem;
+}
+
+.icon-pixelfed::before {
+  content: "📱";
+  font-size: 1.2rem;
+}
+
+.icon-facebook::before {
+  content: "📘";
+  font-size: 1.2rem;
+}
+
+.icon-youtube::before {
+  content: "📺";
+  font-size: 1.2rem;
+}
+
+// Icon animations
+@keyframes iconGlow {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@media (max-width: 768px) {
+  .social-links-container {
+    gap: 1rem;
+  }
+  
+  .social-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .social-icon {
+    font-size: 1rem;
+  }
+}
+
 // VHS Image Include
 .vhs-img-wrapper {
   margin: 2.5rem 0;

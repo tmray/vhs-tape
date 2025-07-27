@@ -22,6 +22,7 @@
           <a href="{{ '/about/' | relative_url }}">About</a>
           <a href="{{ '/contact/' | relative_url }}">Contact</a>
         </div>
+        {% include social-links.html %}
       </div>
     </nav>
     
@@ -34,6 +35,7 @@
     <footer class="site-footer">
       <div class="container">
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}. All rights reserved.</p>
+        {% include social-links.html %}
       </div>
     </footer>
   </body>
