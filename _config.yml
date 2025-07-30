@@ -13,6 +13,10 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
 
+# Include plugins directory
+include:
+  - _plugins
+
 # Pagination
 paginate: 9
 paginate_path: "/posts/:num/"

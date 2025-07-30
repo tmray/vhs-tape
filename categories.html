@@ -11,15 +11,20 @@ title: Categories
 
   <div class="categories-grid">
     {% assign categories = site.posts | map: "category" | uniq | sort %}
+    {% assign normalized_categories = '' | split: '' %}
     {% for category in categories %}
-      {% assign category_posts = site.posts | where_exp: "post", "post.category == category" %}
-      <div class="category-card">
-        <h2 class="category-name">{{ category }}</h2>
-        <p class="category-count">{{ category_posts.size }} post{% if category_posts.size != 1 %}s{% endif %}</p>
-        <a href="{{ '/category/' | append: category | downcase | replace: ' ', '-' | relative_url }}" class="category-link">
-          View Posts →
-        </a>
-      </div>
+      {% assign normalized_category = category | capitalize %}
+      {% unless normalized_categories contains normalized_category %}
+        {% assign normalized_categories = normalized_categories | push: normalized_category %}
+        {% assign category_posts = site.posts | where_exp: "post", "post.category == category" %}
+        <div class="category-card">
+          <h2 class="category-name">{{ normalized_category }}</h2>
+          <p class="category-count">{{ category_posts.size }} post{% if category_posts.size != 1 %}s{% endif %}</p>
+          <a href="{{ '/category/' | append: normalized_category | downcase | replace: ' ', '-' | relative_url }}" class="category-link">
+            View Posts →
+          </a>
+        </div>
+      {% endunless %}
     {% endfor %}
   </div>
 </div> 
