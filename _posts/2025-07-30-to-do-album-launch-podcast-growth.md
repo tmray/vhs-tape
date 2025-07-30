@@ -21,6 +21,8 @@ Our new remix album is a project I'm incredibly excited about. It features reima
 
 This project isn't just about new music; it's a collaboration in the independent scene and connecting and learning from new musicians.
 
+(Related post: Behind the Scenes: My Pre-Release Tech Checklist For Distributing My Band's Remix Album)
+
 # My Biggest Weekly Challenge: Podcast Interviews and Connecting Across Time Zones
 
 I want to use the podcast to combine the creative process and marketing by interviewing the remixers and promoting each song we talk about on the show. So, this week, my main task revolves around scheduling podcast interviews with these remix artists.
