@@ -5,7 +5,7 @@ date: 2025-07-24
 author: Tom Ray
 description: "Launching My Own Open-Source Music Site in 20 Minutes"
 category: technology
-featured_home_order: 1
+featured_home_order: 2
 ---
 {% include youtube.html id="95kvcYLF59c" title="The Bandcamp Alternative That Gives You Control" %}
 
