@@ -4,7 +4,7 @@ title: "Behind the Scenes: My Weekly To-Do for Album Launch & Podcast Growth"
 date: 2025-07-24
 author: Tom Ray
 description: "I think I can promote both at the same time!"
-category: vlogs
+category: "Vlogs"
 featured_home_order: 1
 ---
 {% include youtube.html id="trTFjADjmHo" title="Weekly To-Do: Juggling Album Launch & Podcast Growth (It's a Lot!)" %}
