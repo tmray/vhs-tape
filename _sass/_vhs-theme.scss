@@ -21,6 +21,7 @@ body {
   background: var(--vhs-static-gray);
   color: var(--vhs-warm-white);
   font-family: 'Share Tech Mono', monospace;
+  font-size: 18px; // Increased base font size for better readability
   position: relative;
   overflow-x: hidden;
   
@@ -100,13 +101,22 @@ h1, h2, h3, h4, h5, h6 {
     0 0 10px var(--vhs-crt-green),
     0 0 15px var(--vhs-crt-green);
   letter-spacing: 2px;
-  line-height: 1.4;
+  line-height: 1.6; // Increased line height
+  margin-bottom: 1rem; // Added margin for better spacing
   
   // Subtle glitch effect on hover
   &:hover {
     animation: textGlitch 0.3s ease-in-out;
   }
 }
+
+// Specific heading sizes for better hierarchy
+h1 { font-size: 2rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.3rem; }
+h4 { font-size: 1.1rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.9rem; }
 
 @keyframes textGlitch {
   0%, 100% { transform: translate(0); }
@@ -118,14 +128,21 @@ h1, h2, h3, h4, h5, h6 {
 
 // Body text with chromatic aberration effect
 p, li, div {
+  font-size: 1.1rem; // Increased from default for better readability
+  line-height: 1.8; // Increased line height for easier reading
   text-shadow: 
     1px 0 0 rgba(255, 0, 0, 0.1),
     -1px 0 0 rgba(0, 0, 255, 0.1);
   color: var(--vhs-warm-white);
 }
 
+p {
+  margin-bottom: 1.2rem; // Added spacing between paragraphs
+}
+
 a {
   color: var(--vhs-crt-green);
+  font-size: 1.05rem; // Slightly larger links
   text-decoration: none;
   &:hover {
     text-decoration: underline;
@@ -795,9 +812,9 @@ a {
 
 .post-excerpt {
   color: var(--vhs-warm-white);
-  line-height: 1.6;
+  line-height: 1.7; // Increased
   margin-bottom: 1.5rem;
-  font-size: 0.95rem;
+  font-size: 1.05rem; // Increased from 0.95rem
 }
 
 .post-footer {
@@ -809,7 +826,7 @@ a {
   font-family: 'Share Tech Mono', monospace;
   color: var(--vhs-crt-green);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 1rem; // Increased from 0.9rem
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease;
@@ -1446,8 +1463,8 @@ a {
 .post .post-content {
   font-family: 'Share Tech Mono', monospace;
   color: var(--vhs-static-gray);
-  line-height: 1.7;
-  font-size: 1rem;
+  line-height: 1.9; // Increased for better readability
+  font-size: 1.15rem; // Increased from 1rem
   margin-bottom: 3rem;
 }
 
@@ -1459,17 +1476,19 @@ a {
   text-shadow: 0 0 8px var(--vhs-crt-green);
 }
 
-.post .post-content h1 { font-size: 1.8rem; }
-.post .post-content h2 { font-size: 1.5rem; }
-.post .post-content h3 { font-size: 1.3rem; }
-.post .post-content h4 { font-size: 1.1rem; }
+.post .post-content h1 { font-size: 2rem; } // Increased from 1.8rem
+.post .post-content h2 { font-size: 1.65rem; } // Increased from 1.5rem
+.post .post-content h3 { font-size: 1.4rem; } // Increased from 1.3rem
+.post .post-content h4 { font-size: 1.2rem; } // Increased from 1.1rem
 
 .post .post-content p {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem; // Increased spacing
+  font-size: 1.15rem; // Added explicit size
 }
 
 .post .post-content a {
   color: var(--vhs-amber);
+  font-size: 1.1rem; // Increased link size
   text-decoration: none;
   text-shadow: 0 0 4px var(--vhs-amber);
   transition: all 0.2s ease;
