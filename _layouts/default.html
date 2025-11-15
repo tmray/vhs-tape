@@ -14,15 +14,24 @@
     
     <nav class="site-nav">
       <div class="container">
-        <div class="nav-container">
-          <a href="{{ '/' | relative_url }}">Home</a>
-          <a href="{{ '/posts/' | relative_url }}">Posts</a>
-          <a href="{{ '/categories/' | relative_url }}">Categories</a>
-          <a href="{{ '/tags/' | relative_url }}">Tags</a>
-          <a href="{{ '/about/' | relative_url }}">About</a>
-          <a href="{{ '/contact/' | relative_url }}">Contact</a>
+        <div class="nav-wrapper">
+          <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span>Menu</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="nav-icon" d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          
+          <div class="nav-container">
+            <a href="{{ '/' | relative_url }}">Home</a>
+            <a href="{{ '/posts/' | relative_url }}">Posts</a>
+            <a href="{{ '/categories/' | relative_url }}">Categories</a>
+            <a href="{{ '/tags/' | relative_url }}">Tags</a>
+            <a href="{{ '/about/' | relative_url }}">About</a>
+            <a href="{{ '/contact/' | relative_url }}">Contact</a>
+          </div>
         </div>
-        {% include social-links.html %}
+        <!-- {% include social-links.html %} -->
       </div>
     </nav>
     
