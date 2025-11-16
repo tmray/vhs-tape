@@ -500,7 +500,12 @@ a {
 
 // VHS Hero Section
 .hero-section {
-  background: linear-gradient(135deg, var(--vhs-dark-brown) 0%, var(--vhs-brown) 50%, var(--vhs-faded-red) 100%);
+  /* Base background image layer */
+  --hero-bg: none;
+  background: var(--hero-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--vhs-crt-green);
   padding: 4rem 0;
   text-align: center;
@@ -508,14 +513,22 @@ a {
   position: relative;
   overflow: hidden;
   
-  // VHS tracking lines
+  /* Gradient overlay */
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--vhs-dark-brown) 0%, var(--vhs-brown) 50%, var(--vhs-faded-red) 100%);
+    opacity: 0.85;
+    mix-blend-mode: multiply;
+    z-index: 1;
+  }
+  
+  // VHS tracking lines overlay
   &::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background: repeating-linear-gradient(
       90deg,
       transparent,
@@ -524,6 +537,8 @@ a {
       rgba(0, 255, 65, 0.1) 4px
     );
     animation: trackingLines 3s linear infinite;
+    z-index: 2;
+    pointer-events: none;
   }
 }
 
@@ -534,7 +549,7 @@ a {
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3; /* Above overlays */
 }
 
 .hero-content h1 {
@@ -561,6 +576,27 @@ a {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+// Optional hero image (CRT TV tube style)
+.hero-media {
+  position: relative;
+  z-index: 2;
+}
+
+// Make the hero image a bit larger than the normal preset
+.hero-section .vhs-img-normal {
+  width: 80%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 900px) {
+  .hero-section .vhs-img-normal {
+    width: 90%;
+    max-width: 90vw;
+  }
 }
 
 // VHS Featured Content

@@ -1,9 +1,11 @@
 ---
 layout: default
 title: Home
+hero_image: /assets/images/home-banner/tom-ray-show-time-listened-music-streaming-251113.jpg
+hero_alt: "Picture of Tom Ray"
 ---
 
-<div class="hero-section">
+<div class="hero-section"{% if page.hero_image %} style="--hero-bg: url('{{ page.hero_image }}');"{% endif %}>
   <div class="hero-content">
     <h1>Welcome to My Musical Journey</h1>
     <p class="hero-subtitle">Exploring creativity, music production, and the life of a musician</p>

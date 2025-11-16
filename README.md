@@ -141,4 +141,21 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Support
 
-If you have questions or need help customizing the music player, feel free to reach out! 
+If you have questions or need help customizing the music player, feel free to reach out!
+
+## Home Page Hero Section
+
+The homepage features a customizable hero section with a retro CRT/TV effect, scanlines, and a gradient overlay. You can set a unique background image and alt text for the hero area using front matter variables in your `index.html` or any page using the hero-section block.
+
+### Usage
+
+Add these variables to your page front matter:
+
+```yaml
+hero_image: /assets/images/your-hero-image.jpg  # Path to your hero background image
+hero_alt: "A description of the hero image for accessibility"
+```
+
+The hero section will display your image as a background, with CRT scanlines and a VHS-style gradient overlay. The page title and subtitle (if present) will appear above the image, maintaining readability.
+
+For more details and customization tips, see `HERO_SECTION_USAGE.md`.
