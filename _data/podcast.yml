@@ -1,0 +1,41 @@
+# Lorenzo's Music Podcast Data
+title: "Lorenzo's Music Podcast"
+tagline: "Conversations with artists, music, and making things."
+description: |
+  Join host Lorenzo as he dives deep into conversations with musicians, producers, and creators from around the world. 
+  Each episode explores the creative process, gear, techniques, and the stories behind the music. Whether you're an 
+  aspiring musician, a seasoned pro, or just love discovering new sounds, this podcast brings you authentic, 
+  unfiltered conversations about the art and craft of making music.
+
+# Subscribe Links
+links:
+  apple: "https://itunes.apple.com/us/podcast/lorenzos-music-podcast/id1441923662?mt=2&uo=4"
+  spotify: "https://open.spotify.com/show/41teUSf34DaUAW4Ukk2J7L"
+  youtube: "https://youtube.com/playlist?list=PLbvJrJ34c9MmVSGE4nMSU_KXCR5Bgm-P6&si=bSy7ewpxGZN1JHYy"
+  rss: "https://anchor.fm/s/7a0e054/podcast/rss"
+
+# Featured/Latest Episodes
+episodes:
+  - title: "Episode 45: The Art of Sound Design"
+    date: 2025-11-15
+    youtube_id: "yL_wZRDDZLg"
+    summary: "Exploring the world of sound design with special guest Alex Rodriguez. We discuss modular synthesis, field recording, and how to create unique sonic textures."
+    duration: "58:32"
+    
+  - title: "Episode 44: From Bedroom to Billboard"
+    date: 2025-11-08
+    youtube_id: "yL_wZRDDZLg"  # Replace with actual ID
+    summary: "Producer Sarah Chen shares her journey from making beats in her bedroom to working with major label artists. Learn about her workflow, favorite plugins, and advice for aspiring producers."
+    duration: "1:12:45"
+    
+  - title: "Episode 43: Analog vs Digital - The Great Debate"
+    date: 2025-11-01
+    youtube_id: "yL_wZRDDZLg"  # Replace with actual ID
+    summary: "Is analog really better? We break down the pros and cons of analog and digital gear, discuss hybrid workflows, and why the 'warmth' debate misses the point."
+    duration: "45:20"
+    
+  - title: "Episode 42: Live Performance in 2025"
+    date: 2025-10-25
+    youtube_id: "yL_wZRDDZLg"  # Replace with actual ID
+    summary: "What does it take to put on an unforgettable live show? Touring musician Jamie Park talks about stage setup, dealing with technical issues, and connecting with audiences."
+    duration: "52:18"

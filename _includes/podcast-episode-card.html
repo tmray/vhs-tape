@@ -1,0 +1,47 @@
+{% comment %}
+  Podcast Episode Card
+  Usage:
+  {% include podcast-episode-card.html 
+     title=episode.title 
+     date=episode.date 
+     summary=episode.summary 
+     url=episode.url 
+     audio=episode.audio_url 
+     cover=episode.cover 
+  %}
+
+  Or call with explicit values. If `audio` is present, the site's music-player will be used.
+  If `embed_url` is provided, a generic iframe will be rendered.
+{% endcomment %}
+
+<div class="podcast-episode-card">
+  {% if include.cover %}
+  <div class="episode-cover">
+    <img src="{{ include.cover | relative_url }}" alt="Cover for {{ include.title }}" loading="lazy">
+  </div>
+  {% endif %}
+
+  <div class="episode-body">
+    <h3 class="episode-title">
+      {% if include.url %}
+      <a href="{{ include.url }}" target="_blank" rel="noopener">{{ include.title }}</a>
+      {% else %}
+      {{ include.title }}
+      {% endif %}
+    </h3>
+    {% if include.date %}
+    <p class="episode-date">{{ include.date | date: "%b %d, %Y" }}</p>
+    {% endif %}
+    {% if include.summary %}
+    <p class="episode-summary">{{ include.summary }}</p>
+    {% endif %}
+
+    {% if include.audio %}
+      {% include music-player.html title=include.title artist=page.podcast.title file=include.audio cover=include.cover %}
+    {% elsif include.embed_url %}
+      <div class="episode-embed">
+        <iframe src="{{ include.embed_url }}" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,120 @@
+---
+layout: default
+title: "Lorenzo's Music Podcast"
+permalink: /podcast/
+hero_image: 
+hero_alt: 
+---
+
+{% assign podcast = site.data.podcast %}
+
+<!-- Hero Section -->
+<section class="podcast-hero">
+  <div class="podcast-hero-content">
+    <h1 class="podcast-hero-title">{{ podcast.title }}</h1>
+    <p class="podcast-hero-tagline">{{ podcast.tagline }}</p>
+    <div class="podcast-hero-cta">
+      <a href="#subscribe" class="btn btn-primary podcast-cta-button">Subscribe Now</a>
+      <a href="#episodes" class="btn btn-secondary podcast-cta-button">Watch Episodes</a>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="podcast-about">
+  <div class="container">
+    <h2>About The Show</h2>
+    <div class="podcast-description">
+      {{ podcast.description | markdownify }}
+    </div>
+  </div>
+</section>
+
+<!-- Subscribe Section -->
+<section class="podcast-subscribe-section" id="subscribe">
+  <div class="container">
+    <h2>Listen & Subscribe</h2>
+    <p class="podcast-subscribe-intro">Never miss an episode. Subscribe on your favorite platform:</p>
+    {% include podcast-subscribe.html %}
+  </div>
+</section>
+
+<!-- Latest Episode -->
+{% assign latest = podcast.episodes.first %}
+<section class="podcast-featured" id="episodes">
+  <div class="container">
+    <h2>Latest Episode</h2>
+    <div class="podcast-featured-episode">
+      <div class="featured-video">
+        {% if latest.youtube_id != "" %}
+          {% include youtube.html id=latest.youtube_id title=latest.title %}
+        {% else %}
+          <div class="placeholder-video">
+            <p>Episode video coming soon</p>
+          </div>
+        {% endif %}
+      </div>
+      <div class="featured-details">
+        <h3>{{ latest.title }}</h3>
+        <p class="episode-meta">
+          <span class="episode-date">{{ latest.date | date: "%B %d, %Y" }}</span>
+          {% if latest.duration %}
+          <span class="episode-duration">{{ latest.duration }}</span>
+          {% endif %}
+        </p>
+        <p class="episode-summary">{{ latest.summary }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Recent Episodes Grid -->
+<section class="podcast-episodes-section">
+  <div class="container">
+    <h2>Recent Episodes</h2>
+    <div class="podcast-episodes-grid">
+      {% for episode in podcast.episodes offset:1 limit:6 %}
+      <div class="podcast-episode-item">
+        <div class="episode-thumbnail">
+          {% if episode.youtube_id != "" %}
+            <a href="https://www.youtube.com/watch?v={{ episode.youtube_id }}" target="_blank" rel="noopener">
+              <img src="https://img.youtube.com/vi/{{ episode.youtube_id }}/mqdefault.jpg" alt="{{ episode.title }}" loading="lazy">
+              <div class="play-overlay">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </a>
+          {% else %}
+            <div class="episode-placeholder">
+              <p>Coming Soon</p>
+            </div>
+          {% endif %}
+        </div>
+        <div class="episode-info">
+          <h4>{{ episode.title }}</h4>
+          <p class="episode-meta">
+            <span class="episode-date">{{ episode.date | date: "%b %d, %Y" }}</span>
+            {% if episode.duration %}
+            <span class="episode-duration">{{ episode.duration }}</span>
+            {% endif %}
+          </p>
+          <p class="episode-summary">{{ episode.summary }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Footer -->
+<section class="podcast-cta-footer">
+  <div class="container">
+    <h2>Join The Community</h2>
+    <p>Get notified about new episodes, behind-the-scenes content, and exclusive interviews.</p>
+    <div class="podcast-cta-buttons">
+      <a href="{{ podcast.links.youtube }}" target="_blank" rel="noopener" class="btn btn-primary">Watch on YouTube</a>
+      <a href="{{ podcast.links.spotify }}" target="_blank" rel="noopener" class="btn btn-secondary">Listen on Spotify</a>
+    </div>
+  </div>
+</section>
