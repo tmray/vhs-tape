@@ -1,0 +1,46 @@
+---
+layout: default
+title: "Comics & Books"
+permalink: /books/
+---
+
+{% assign catalog = site.data.books %}
+
+<section class="books-hero">
+  <div class="books-hero-content">
+    <h1 class="books-hero-title">Comics & Books</h1>
+    <p class="books-hero-tagline">Two series. Many stories. DRM‑free ebooks and Amazon editions.</p>
+    <div class="books-hero-cta">
+      <a href="#series" class="btn btn-primary">Browse Series</a>
+    </div>
+  </div>
+</section>
+
+<section class="books-series" id="series">
+  <div class="container">
+    {% for s in catalog.series %}
+    <div class="series-section" id="series-{{ s.slug }}">
+      <div class="series-header">
+        <h2 class="series-title">{{ s.title }}</h2>
+        {% if s.tagline %}<p class="series-tagline">{{ s.tagline }}</p>{% endif %}
+        {% if s.description %}<div class="series-description">{{ s.description | markdownify }}</div>{% endif %}
+      </div>
+      <div class="series-grid">
+        {% for book in s.books %}
+          {% include book-card.html book=book %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="books-cta-footer">
+  <div class="container">
+    <h2>Start Reading Today</h2>
+    <p>Grab a DRM‑free download or pick up the Kindle and print editions on Amazon.</p>
+    <div class="books-cta-buttons">
+      <a href="#series" class="btn btn-primary">See All Books</a>
+    </div>
+  </div>
+</section>

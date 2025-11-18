@@ -1,0 +1,40 @@
+{% comment %}
+  Book Format Buttons
+  Usage: {% include book-format-buttons.html formats=book.formats %}
+{% endcomment %}
+
+{% assign f = include.formats %}
+{% if f %}
+<div class="book-format-buttons">
+  {% if f.ebook_pdf %}
+  <a class="format-button pdf" href="{{ f.ebook_pdf }}" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 7V3.5L19.5 9H14z"/></svg>
+    PDF
+  </a>
+  {% endif %}
+  {% if f.ebook_epub %}
+  <a class="format-button epub" href="{{ f.ebook_epub }}" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 12l11 10 3.5-3.5L8 12l7.5-6.5L12 2z"/></svg>
+    EPUB
+  </a>
+  {% endif %}
+  {% if f.kindle %}
+  <a class="format-button kindle" href="{{ f.kindle }}" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h12V4H6z"/></svg>
+    Kindle
+  </a>
+  {% endif %}
+  {% if f.paperback %}
+  <a class="format-button paperback" href="{{ f.paperback }}" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4 2h10a4 4 0 0 1 4 4v16H6a2 2 0 0 1-2-2V2z"/></svg>
+    Paperback
+  </a>
+  {% endif %}
+  {% if f.hardcover %}
+  <a class="format-button hardcover" href="{{ f.hardcover }}" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5 2h9a4 4 0 0 1 4 4v16H7a2 2 0 0 1-2-2V2z"/></svg>
+    Hardcover
+  </a>
+  {% endif %}
+</div>
+{% endif %}

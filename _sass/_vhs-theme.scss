@@ -2041,6 +2041,57 @@ a {
   }
 }
 
+/* Books / Comics Landing Page */
+.books-hero {
+  background: linear-gradient(135deg, var(--vhs-dark-brown) 0%, var(--vhs-brown) 50%, var(--vhs-faded-red) 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: -3rem 0 0 0;
+  &::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,255,65,0.05) 2px, rgba(0,255,65,0.05) 4px); animation: scanlines 0.1s linear infinite; pointer-events: none; }
+}
+.books-hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+.books-hero-title { font-size: 3rem; margin: 0 0 1rem 0; text-shadow: 0 0 20px var(--vhs-crt-green), 0 0 40px var(--vhs-crt-green); }
+.books-hero-tagline { font-family: 'VT323', monospace; font-size: 1.3rem; color: var(--vhs-amber); text-shadow: 0 0 10px var(--vhs-amber); margin: 0 0 2rem 0; }
+.books-hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+.books-series { padding: 4rem 0; background: var(--vhs-static-gray); }
+.series-section { margin-bottom: 3rem; }
+.series-header { text-align: center; margin-bottom: 2rem; }
+.series-title { font-size: 2.2rem; margin: 0 0 0.5rem 0; }
+.series-tagline { font-family: 'VT323', monospace; color: var(--vhs-amber); font-size: 1.2rem; margin: 0 0 1rem 0; }
+.series-description { max-width: 800px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; }
+
+.series-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+@media (max-width: 1024px) { .series-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .series-grid { grid-template-columns: 1fr; } }
+
+.book-card { display: grid; grid-template-columns: 160px 1fr; gap: 1rem; background: var(--vhs-static-gray); border: 2px solid var(--vhs-crt-green); border-radius: 12px; padding: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.3); transition: transform 0.2s ease; }
+.book-card:hover { transform: translateY(-3px); border-color: var(--vhs-amber); box-shadow: 0 6px 16px rgba(0,255,65,0.3), 0 0 30px rgba(0,255,65,0.2); }
+@media (max-width: 600px) { .book-card { grid-template-columns: 1fr; } }
+.book-cover img { width: 160px; height: 220px; object-fit: cover; border-radius: 8px; }
+@media (max-width: 600px) { .book-cover img { width: 100%; height: auto; } }
+.book-title { margin: 0; font-size: 1.3rem; }
+.book-subtitle { margin: 0.2rem 0 0.5rem; color: #ddd; }
+.book-meta { margin: 0 0 0.5rem; color: #bbb; font-size: 0.95rem; }
+.book-description { margin: 0 0 0.75rem; }
+
+.book-format-buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.format-button { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 0.8rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-family: 'Share Tech Mono', monospace; border: 2px solid var(--vhs-crt-green); background: var(--vhs-static-gray); color: var(--vhs-crt-green); transition: all 0.25s ease; }
+.format-button:hover { background: var(--vhs-crt-green); color: var(--vhs-static-gray); transform: translateY(-1px); }
+.format-button.pdf { border-color: var(--vhs-crt-green); }
+.format-button.epub { border-color: var(--vhs-crt-green); }
+.format-button.kindle { border-color: var(--vhs-amber); }
+.format-button.paperback { border-color: var(--vhs-amber); }
+.format-button.hardcover { border-color: var(--vhs-amber); }
+
+.books-cta-footer { padding: 4rem 2rem; background: linear-gradient(135deg, var(--vhs-dark-brown) 0%, var(--vhs-brown) 100%); text-align: center; position: relative; }
+.books-cta-footer::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,255,65,0.05) 2px, rgba(0,255,65,0.05) 4px); pointer-events: none; }
+.books-cta-footer h2 { position: relative; z-index: 2; margin-bottom: 1rem; }
+.books-cta-footer p { position: relative; z-index: 2; font-size: 1.1rem; margin-bottom: 2rem; }
+.books-cta-buttons { position: relative; z-index: 2; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
 .post .post-meta {
   display: flex;
   flex-wrap: wrap;

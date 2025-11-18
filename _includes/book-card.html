@@ -1,0 +1,24 @@
+{% comment %}
+  Book Card
+  Usage: {% include book-card.html book=book %}
+{% endcomment %}
+
+{% assign book = include.book %}
+<div class="book-card">
+  <div class="book-cover">
+    <img src="{{ book.cover | relative_url }}" alt="Cover of {{ book.title }}" loading="lazy" />
+  </div>
+  <div class="book-info">
+    <h3 class="book-title">{{ book.title }}</h3>
+    {% if book.subtitle %}
+    <p class="book-subtitle">{{ book.subtitle }}</p>
+    {% endif %}
+    {% if book.pages %}
+    <p class="book-meta">{{ book.pages }} pages</p>
+    {% endif %}
+    {% if book.description %}
+    <p class="book-description">{{ book.description }}</p>
+    {% endif %}
+    {% include book-format-buttons.html formats=book.formats %}
+  </div>
+</div>

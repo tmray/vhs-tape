@@ -1,0 +1,68 @@
+# Comics & Books Data
+series:
+  - title: "Then This Happened..."
+    slug: then-this-happened
+    tagline: "A daily webcomic diary about life, creativity, and small moments."
+    description: |
+      "Then This Happened..." is my ongoing webcomic diary. Short, personal strips about
+      everyday moments—creative wins, awkward fails, and everything in between. This series
+      collects select arcs into polished book editions for easy reading.
+    hero_image: 
+    books:
+      - title: "Then This Happened... Vol. 1"
+        subtitle: "A Diary About Breast Cancer"
+        cover: https://m.media-amazon.com/images/I/716-If7INUL._SL1500_.jpg
+        description: |
+          A curated collection from the first year of the webcomic diary. Includes commentary
+          on process, tools, and the stories behind the strips.
+        pages: 128
+        formats:
+          ebook_pdf: "#"           # Replace with your direct download/store URL
+          ebook_epub: "#"          # Optional EPUB link
+          kindle: "#"              # Kindle eBook URL
+          paperback: "#"           # Amazon paperback URL
+          hardcover: "#"           # Optional hardcover URL
+      - title: "Then This Happened... Vol. 2"
+        subtitle: "Keep Going"
+        cover: /assets/images/books/then-this-happened-vol2.jpg
+        description: |
+          More diary strips focused on making things consistently, even when it feels tough—
+          plus a look at creative routines, habits, and lessons learned.
+        pages: 144
+        formats:
+          ebook_pdf: "#"
+          ebook_epub: "#"
+          kindle: "#"
+          paperback: "#"
+
+  - title: "Bobert and the Monster"
+    slug: bobert-and-the-monster
+    tagline: "Short, funny comics about two unlikely friends and their weird world."
+    description: |
+      A collection of short, humorous comics featuring Bobert and The Monster, plus other
+      character stories. Silly, charming, and occasionally heartfelt.
+    hero_image: 
+    books:
+      - title: "Bobert and the Monster: Shorts"
+        subtitle: "Collected Stories"
+        cover: /assets/images/books/bobert-monster-shorts.jpg
+        description: |
+          Bite-sized comics and gags, collected for the first time. Great as an intro to
+          the characters and their world.
+        pages: 96
+        formats:
+          ebook_pdf: "#"
+          ebook_epub: "#"
+          kindle: "#"
+          paperback: "#"
+      - title: "Bobert and the Monster: Adventures"
+        subtitle: "Longer Tales"
+        cover: /assets/images/books/bobert-monster-adventures.jpg
+        description: |
+          Slightly longer stories with bigger stakes and bigger laughs. Includes bonus
+          sketches and concept art.
+        pages: 128
+        formats:
+          ebook_pdf: "#"
+          kindle: "#"
+          paperback: "#"
