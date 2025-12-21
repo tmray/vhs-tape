@@ -1,0 +1,14 @@
+---
+title: "Antique mall."
+date: 2025-04-16 00:00:00 
+permalink: /2025/04/antique-mall.html
+thumbnail: https://blogger.googleusercontent.com/img/a/AVvXsEjIQFXnX07P6OdpwMboh15TNWwivlYIDAXDXaI4uZVBxQ4SbLv6fnWV7-cNz-6qEQv957TZjhFjru95iTV9_78yE8QtLH1Fl6RiObJosqJFSaZ1h-1RkTdWSehInnFZwcutI_Jctko9_GfrTJKmR1T9J_8hOCkb54clAYX5VDx9CQFQlJ1s4g9-jPwxs9Q5=w533-h640
+excerpt: "Then This Happened Webcomic - Antique mall - Apr 16, 2025"
+tags: ["comics", "then-this-happened"]
+---
+
+<div class="separator" style="clear: both; text-align: center;">
+  <a href="https://blogger.googleusercontent.com/img/a/AVvXsEjIQFXnX07P6OdpwMboh15TNWwivlYIDAXDXaI4uZVBxQ4SbLv6fnWV7-cNz-6qEQv957TZjhFjru95iTV9_78yE8QtLH1Fl6RiObJosqJFSaZ1h-1RkTdWSehInnFZwcutI_Jctko9_GfrTJKmR1T9J_8hOCkb54clAYX5VDx9CQFQlJ1s4g9-jPwxs9Q5" style="margin-left: 1em; margin-right: 1em;">
+    <img alt="Then This Happened Webcomic by Tom Ray" border="0" height="640" src="https://blogger.googleusercontent.com/img/a/AVvXsEjIQFXnX07P6OdpwMboh15TNWwivlYIDAXDXaI4uZVBxQ4SbLv6fnWV7-cNz-6qEQv957TZjhFjru95iTV9_78yE8QtLH1Fl6RiObJosqJFSaZ1h-1RkTdWSehInnFZwcutI_Jctko9_GfrTJKmR1T9J_8hOCkb54clAYX5VDx9CQFQlJ1s4g9-jPwxs9Q5=w533-h640" title="Antique mall" width="533" />
+  </a>
+</div><p style="text-align: left;">Turned out that guy didn't even work there; he was just hanging out.</p><div class="tomsbox"><h2 style="text-align: center;">Then This Happened... A diary about breast cancer</h2><div class="separator" style="clear: both; text-align: center;"><a href="https://www.amazon.com/dp/B07L1WSFMV?&amp;linkCode=ll1&amp;tag=lorsmus-20&amp;linkId=6546afa5cee47a5893f4fb7aa050155f&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow" style="margin-left: 1em; margin-right: 1em;" target="_blank"><img border="0" data-original-height="342" data-original-width="214" height="320" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaMOd1S1r6O381n_rhsLrzDTSj-wDr5V2ALzuqDX1puMpxtIU60rfmRta4jy3BCzsHj_PPTh8vCpVLTL61S6Gnv-86UjKZo_3UrNl60fvtpgimI-7z_CWus4Bx986KT2JOp-MGbkfsN-JIX6a4eL0c5DSUbY-goUy8Zf_FAOxN0O-e5YENPVxHtNlClSqG/s320/adabc-cover-small.jpg" width="200"></a></div><p style="text-align: center;">A comic diary about our lives after my wife found out she had breast cancer.</p><p style="text-align: center;"><b>Read it on Amazon</b></p><p style="text-align: center;"><a class="flat-button fancy-button fancy-blue" href="https://www.amazon.com/dp/B07L1WSFMV?&amp;linkCode=ll1&amp;tag=lorsmus-20&amp;linkId=6546afa5cee47a5893f4fb7aa050155f&amp;language=en_US&amp;ref_=as_li_ss_tl" rel="nofollow" target="_blank">Get the ebook</a></p></div><p style="text-align: left;"><br /></p>
