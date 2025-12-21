@@ -22,7 +22,7 @@ series:
           kindle: "https://www.amazon.com/dp/B07L1WSFMV"
           paperback: "https://www.amazon.com/dp/179057384X"
           
-      - title: "Then This Happened...: Now what? One year later"
+      - title: "Then This Happened... Now what? One year later"
         subtitle: "Book 2"
         cover: /assets/images/books/then-this-happened-book2.jpg
         description: |
@@ -46,7 +46,7 @@ series:
           kindle: "https://www.amazon.com/dp/B08RC4Q527"
           paperback: "https://www.amazon.com/dp/B08R8JLJ61"
           
-      - title: "Then This Happened...: Home Working"
+      - title: "Then This Happened... Home Working"
         subtitle: "Book 4"
         cover: /assets/images/books/then-this-happened-book4.jpg
         description: |
@@ -58,7 +58,7 @@ series:
           kindle: "https://www.amazon.com/dp/B09RPXBMM1"
           paperback: "https://www.amazon.com/dp/B09QNYJKDR"
           
-      - title: "Then This Happened...: Going outside again"
+      - title: "Then This Happened... Going outside again"
         subtitle: "Book 5"
         cover: /assets/images/books/then-this-happened-book5.jpg
         description: |
@@ -70,7 +70,7 @@ series:
           kindle: "https://www.amazon.com/dp/B0C1GVSXVF"
           paperback: "https://www.amazon.com/dp/B0C1251BJZ"
           
-      - title: "Then This Happened...: An unexpected trip"
+      - title: "Then This Happened... An unexpected trip"
         subtitle: "Book 6"
         cover: /assets/images/books/then-this-happened-book6.jpg
         description: |

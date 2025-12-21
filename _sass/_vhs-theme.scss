@@ -2063,8 +2063,7 @@ a {
 .series-tagline { font-family: 'VT323', monospace; color: var(--vhs-amber); font-size: 1.2rem; margin: 0 0 1rem 0; }
 .series-description { max-width: 800px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; }
 
-.series-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-@media (max-width: 1024px) { .series-grid { grid-template-columns: repeat(2, 1fr); } }
+.series-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
 @media (max-width: 768px) { .series-grid { grid-template-columns: 1fr; } }
 
 .book-card { display: grid; grid-template-columns: 160px 1fr; gap: 1rem; background: var(--vhs-static-gray); border: 2px solid var(--vhs-crt-green); border-radius: 12px; padding: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.3); transition: transform 0.2s ease; }
@@ -2105,12 +2104,12 @@ a {
 
 .post .post-description {
   font-family: 'Share Tech Mono', monospace;
-  color: var(--vhs-faded-yellow);
+  color: var(--vhs-static-gray);
   font-size: 1.1rem;
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
-  text-shadow: 0 0 4px var(--vhs-faded-yellow);
+  text-shadow: 0 0 4px var(--vhs-static-gray);
 }
 
 .post .post-content {
