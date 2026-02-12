@@ -17,26 +17,26 @@ links:
 
 # Featured/Latest Episodes
 episodes:
-  - title: "Episode 45: The Art of Sound Design"
-    date: 2025-11-15
-    youtube_id: "yL_wZRDDZLg"
-    summary: "Exploring the world of sound design with special guest Alex Rodriguez. We discuss modular synthesis, field recording, and how to create unique sonic textures."
-    duration: "58:32"
+  - title: "Ardour DAW - Paul Davis - Evolution of the Open Source DAW"
+    date: 2025-11-21
+    youtube_id: "rdV5kSGZX4A"
+    summary: "This episode of the podcast, I talk with Paul Davis, creator of the open-source DAW Ardour"
+    duration: "53:13"
     
-  - title: "Episode 44: From Bedroom to Billboard"
-    date: 2025-11-08
+  - title: "MusicBrainz - Robert Kaye - Community, Open Source, and Metadata"
+    date: 2025-11-07
     youtube_id: "yL_wZRDDZLg"  # Replace with actual ID
-    summary: "Producer Sarah Chen shares her journey from making beats in her bedroom to working with major label artists. Learn about her workflow, favorite plugins, and advice for aspiring producers."
-    duration: "1:12:45"
+    summary: "This episode of the podcast, I meet Robert Kaye, the founder of MusicBrainz a nonprofit organization dedicated to providing open source music metadata"
+    duration: "55:12"
     
-  - title: "Episode 43: Analog vs Digital - The Great Debate"
-    date: 2025-11-01
-    youtube_id: "yL_wZRDDZLg"  # Replace with actual ID
-    summary: "Is analog really better? We break down the pros and cons of analog and digital gear, discuss hybrid workflows, and why the 'warmth' debate misses the point."
-    duration: "45:20"
+  - title: "Ubuntu Studio - Linux For Creatives with Erich Eickmeyer"
+    date: 2025-10-10
+    youtube_id: "i39125kfjfQ"  # Replace with actual ID
+    summary: "In this episode of The Lorenzo's Music Podcast, I talk with Erich Eickmeyer, the project leader of Ubuntu Studio"
+    duration: "53:25"
     
-  - title: "Episode 42: Live Performance in 2025"
-    date: 2025-10-25
-    youtube_id: "yL_wZRDDZLg"  # Replace with actual ID
-    summary: "What does it take to put on an unforgettable live show? Touring musician Jamie Park talks about stage setup, dealing with technical issues, and connecting with audiences."
-    duration: "52:18"
+  - title: "Crash Server - The Art of Live Coding Music"
+    date: 2025-12-05
+    youtube_id: "nJyklIeDSQc"  # Replace with actual ID
+    summary: "This episode of the podcast, I talk with Crash Server, the live coding musician duo from France"
+    duration: "44:14"
