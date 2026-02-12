@@ -39,41 +39,30 @@ hero_alt:
   </div>
 </section>
 
-<!-- Latest Episode -->
-{% assign latest = podcast.episodes.first %}
+<!-- Episodes -->
 <section class="podcast-featured" id="episodes">
   <div class="container">
     <h2>Latest Episode</h2>
     <div class="podcast-featured-episode">
       <div class="featured-video">
-        {% if latest.youtube_id != "" %}
-          {% include youtube.html id=latest.youtube_id title=latest.title %}
-        {% else %}
-          <div class="placeholder-video">
-            <p>Episode video coming soon</p>
+        <div class="vhs-video-wrapper">
+          <div class="vhs-video-frame">
+            <iframe width="100%" height="600" src="https://www.youtube.com/embed/videoseries?list=PLbvJrJ34c9MmVSGE4nMSU_KXCR5Bgm-P6" title="Lorenzo's Music Podcast" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="vhs-video-overlay"></div>
+            <div class="vhs-video-scanlines"></div>
           </div>
-        {% endif %}
-      </div>
-      <div class="featured-details">
-        <h3>{{ latest.title }}</h3>
-        <p class="episode-meta">
-          <span class="episode-date">{{ latest.date | date: "%B %d, %Y" }}</span>
-          {% if latest.duration %}
-          <span class="episode-duration">{{ latest.duration }}</span>
-          {% endif %}
-        </p>
-        <p class="episode-summary">{{ latest.summary }}</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Recent Episodes Grid -->
+<!-- Featured Episodes Grid -->
 <section class="podcast-episodes-section">
   <div class="container">
-    <h2>Recent Episodes</h2>
+    <h2>Featured Episodes</h2>
     <div class="podcast-episodes-grid">
-      {% for episode in podcast.episodes offset:1 limit:6 %}
+      {% for episode in podcast.episodes limit:6 %}
       <div class="podcast-episode-item">
         <div class="episode-thumbnail">
           {% if episode.youtube_id != "" %}
